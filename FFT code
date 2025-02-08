@@ -1,0 +1,70 @@
+clc;
+close all;
+
+ts = 2E-9;          %sample time
+fs = 1/ts;          %sample rate
+% Load the CSV file
+T = readmatrix('tek0388CH2.csv');
+
+% Save the data to a MAT file
+save('output.mat', 'T');
+
+load ('output.mat');
+
+x = T(2000:8000, 1);
+y = T(2000:8000, 2);
+
+m = length(y);
+n = pow2(nextpow2(m));
+
+dim = 1;
+fr = (fs*(0:(m/2))/m)*1e-6;
+
+% Calculate upper and lower envelopes
+[upper_envelope, lower_envelope] = envelope(y,50,'peak');
+
+% Plot the original signal and envelopes
+figure(1);
+subplot(2,1,1);
+plot(x, y, 'b', 'LineWidth', 4);
+hold on;
+plot(x, upper_envelope, 'r--', 'LineWidth', 2.5);
+plot(x, lower_envelope, 'g--', 'LineWidth', 2.5);
+grid on;
+title('UT signal in Castor Oil (density ~0.958)-Time Domain');
+xlabel('Time [\mus]','fontweight','bold');
+ylabel('Amplitude [mV]','fontweight','bold');
+set(gca,'linewidth',2,'FontSize', 16);
+legend('Original Signal', 'Upper Envelope', 'Lower Envelope');
+grid on;
+
+yfft = fft(y, n, dim);
+
+P2 = abs(yfft/m);
+P1 = P2(floor(1:m/2+1));
+P1(2:end-1) = 2*P1(2:end-1);
+
+ft = fittype( 'smoothingspline' );
+opts = fitoptions( 'Method', 'SmoothingSpline' );
+opts.SmoothingParam = 0.9999;
+
+%Fit model to data.
+[fitresult, gof] = fit( fr', P1*1e4, ft, opts );
+%[up_envelope] = envelope(P1*1e4,50,'analytic');
+
+
+figure(1);
+subplot(2,1,2)
+h=plot(fitresult,'k-', fr', P1*1e4,'g--');
+%hold on;
+%plot(fr', up_envelope, 'r--', 'LineWidth', 1.2);
+%h = plot(fr', P1*1e4,'g-');
+grid on;
+set(h,'LineWidth',4);
+xlim([0.4 25]);
+title('FFT UT signal in Castor Oil (density ~0.958)');
+xlabel('Frequency [MHz]','fontweight','bold');
+ylabel('Amplitude [mV]','fontweight','bold');
+set(gca,'linewidth',2,'FontSize', 18);
+legend('fft', 'fitted curve');
+grid on;
