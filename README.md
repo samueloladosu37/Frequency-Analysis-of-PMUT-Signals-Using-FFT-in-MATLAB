@@ -36,9 +36,11 @@ This project involves the experimental analysis of Piezoelectric Micromachined U
 
 ---
 
-## Author
+
+## 👨‍💻 Author
 
 **Samuel Oladosu**  
-[samueloladosu37@gmail.com] 
+- 📫 [samueloladosu37@gmail.com](mailto:samueloladosu37@gmail.com)  
+- 🔗 [LinkedIn](https://www.linkedin.com/in/samueloladosu/)  
 
 
