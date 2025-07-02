@@ -30,9 +30,9 @@ This project involves the experimental analysis of Piezoelectric Micromachined U
 
 ### 🔩 Result
 
-A 3D-printed holder for RF probe station testing.
+![Preview](https://github.com/samueloladosu37/Frequency-Analysis-of-PMUT-Signals-Using-FFT-in-MATLAB/blob/main/Result%203.png)
 
-![Preview](My-Design/preview.png)
+![Preview](https://github.com/samueloladosu37/Frequency-Analysis-of-PMUT-Signals-Using-FFT-in-MATLAB/blob/main/Result%203.png)
 
 ## Significance
 
