@@ -28,6 +28,12 @@ This project involves the experimental analysis of Piezoelectric Micromachined U
 - Magnitude spectra were plotted to visualize dominant frequencies.
 - Peak detection was performed to identify significant resonant frequencies.
 
+### 🔩 Result
+
+A 3D-printed holder for RF probe station testing.
+
+![Preview](My-Design/preview.png)
+
 ## Significance
 
 - Characterization of the resonant frequency and bandwidth of the PMUT device.
