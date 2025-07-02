@@ -29,8 +29,11 @@ This project involves the experimental analysis of Piezoelectric Micromachined U
 - Peak detection was performed to identify significant resonant frequencies.
 
 ### 🔩 Result
+**PMUT Signal 1**
 
 ![Preview](https://github.com/samueloladosu37/Frequency-Analysis-of-PMUT-Signals-Using-FFT-in-MATLAB/blob/main/Result%203.png)
+
+**PMUT Signal 2**
 
 ![Preview](https://github.com/samueloladosu37/Frequency-Analysis-of-PMUT-Signals-Using-FFT-in-MATLAB/blob/main/Result%201.png)
 
