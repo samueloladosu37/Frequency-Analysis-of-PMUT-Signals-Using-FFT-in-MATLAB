@@ -32,7 +32,7 @@ This project involves the experimental analysis of Piezoelectric Micromachined U
 
 ![Preview](https://github.com/samueloladosu37/Frequency-Analysis-of-PMUT-Signals-Using-FFT-in-MATLAB/blob/main/Result%203.png)
 
-![Preview](https://github.com/samueloladosu37/Frequency-Analysis-of-PMUT-Signals-Using-FFT-in-MATLAB/blob/main/Result%203.png)
+![Preview](https://github.com/samueloladosu37/Frequency-Analysis-of-PMUT-Signals-Using-FFT-in-MATLAB/blob/main/Result%201.png)
 
 ## Significance
 
