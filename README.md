@@ -7,9 +7,9 @@ This project involves the experimental analysis of Piezoelectric Micromachined U
 
 ## Signal Acquisition
 
-- The PMUT device was excited under a probe station.
+- The PMUT device was excited under a probe station in a non conductive liquid.
 - The response signals were measured and recorded using an oscilloscope.
-- Time-domain signals for both transmitted and received waves were captured.
+- Time-domain signals for both transmitted and received waves were recorded.
 
 ## Data Processing
 
